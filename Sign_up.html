@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>About Us</title>
+        <link rel="javascript" src="D:/projects/Music website/l.js">
+        <style>
+            body {
+                background-color: rgb(39, 39, 39);
+                overflow: auto;
+            }
+            .box {
+                border: 1px solid none;
+                height: 50%;
+                width: 33%;
+                position: absolute;
+                border-radius: 15px;
+                display: inline;
+                background-color: whitesmoke;
+                overflow-y: scroll;
+                background-color: cadetblue;
+            }
+            .box h1 {
+                text-align: center; 
+                margin: 3px;
+                
+            }
+            .box hr {
+                margin: 0;
+                color: aquamarine;
+            }
+            li {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: 55px;
+            }
+            li:hover {
+                background-color: rgb(77, 141, 143);
+            }
+            li span {
+                float: left;
+                font-size: 20px;
+                font-weight: 600px;
+                margin-left: 10px;
+                cursor: default;
+            }
+            li h4 {
+                cursor: default;
+            }
+            li img {
+                width: 40px;
+                height: 40px;
+                margin: -9px 17px;
+            }
+            li svg {
+                float: right;
+                position: absolute;
+                right: 1%;
+                cursor:pointer;
+            }
+            li .subtitle {
+                font-size: 14px;
+                color:rgb(68, 66, 66)
+            }
+            .audioPlayer{
+                display: block;
+                border-radius: 20px;
+                margin:0 auto;
+            }
+            audio::-webkit-media-controls-play-button,
+            audio::-webkit-media-controls-panel {
+                background-color: cadetblue;
+                color: #000;
+                border-radius: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>Telugu Songs</h1>
+            <hr>
+            <li>
+                <span>01</span> 
+                <img src="D:/projects/Music website/music jpgs/1.jpg">
+                <h4>
+                    Ninnu Choose Anandamlo
+                    <div class="subtitle">-Gang Leader</div>                        
+                </h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16" id="icon">
+                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>  
+                <audio class='audioPlayer' autoplay controls loop  title='Song artist/title goes here...'>
+                    <source src='t1.mp3' type='audio/mpeg'>
+                  </audio>
+                
+            </li>
+            <script src="l.js"></script>
+            <hr>
+        </div>
+    </body>
+</html>
