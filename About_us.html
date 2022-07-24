@@ -5,18 +5,21 @@
         <title>About Us</title>
         <style>
             body {
+                margin: 0;
+                margin-top: -15px;
                 background-color: rgb(39, 39, 39);
                 overflow: auto;
             }
             .box {
+                margin: -15px 0;
                 border: 1px solid none;
                 height: 50%;
-                width: 33%;
+                width: 50%;
                 position: absolute;
                 border-radius: 15px;
                 display: inline;
                 background-color: whitesmoke;
-                overflow-y: scroll;
+                overflow: auto;
                 background-color: cadetblue;
             }
             .box h1 {
@@ -63,16 +66,51 @@
                 font-size: 14px;
                 color:rgb(68, 66, 66)
             }
-            audio::-webkit-media-controls-play-button,
             audio::-webkit-media-controls-panel {
                 background-color: cadetblue;
-                color: #000;
-                
+                color: #000;    
+            }
+            .nav_bar {
+                display: flex;
+                background: black;
+                align-items: center;
+                justify-content: center;
+                position: sticky;
+                gap: 10px;
+                height: 45px;
+            }
+            #a:hover {
+                background-color: black;
+            }
+            #b{
+                text-decoration: none;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+            }
+            #b:hover {
+                background-color: white;
+                color: rgb(115, 0, 255);
+            }
+            .Footer {
+                height: 100%;
+                width: 100%
+            }
+            .Footer .Copyright {
+                font-size: 15px;
+                font-family:'Courier New', Courier, monospace;
+                color: white;
+                text-align: center;
+                margin-top: 700px;
             }
         </style>
+        <script src="D:/projects/Music website/l.js"></script>
     </head>
     <body>
-        
+        <ul class="nav_bar">
+            <li id="a"><a href="index.html" id="b">HOME</a></li>
+            <li id="a"><a href="About_us.html" id="b">ABOUT US</a></li>
+            <li id="a"><a href="#CONTACT" id="b">CONTACT</a></li>
+        </ul>
         <div class="box" style="background: linear-gradient(#ffafbd, #ffc3a0)">
             <h1>Telugu Songs</h1>
             <hr>
@@ -83,13 +121,10 @@
                     Ninnu Choose Anandamlo
                     <div class="subtitle">-Gang Leader</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song')"/>
-                </svg>  
-                <audio id="song">
+                <audio controls id="song">
                     <source src="t1.mp3">
                 </audio>
-                <script src="l.js"></script>
+                
             </li>
             
             <hr>
@@ -100,10 +135,8 @@
                     Lokiverse(Background score)
                     <div class="subtitle">-Vikram</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song1')"/>
-                </svg>  
-                <audio  id="song1">
+                  
+                <audio controls  id="song1">
                     <source src="t2.mp3">
                 </audio>
             </li>
@@ -116,10 +149,8 @@
                     Hrudayama
                     <div class="subtitle">-Major</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song2')"/>
-                </svg>  
-                <audio src="t3.mp3" type="audio/mp3" id="song2"></audio>
+                  
+                <audio controls src="t3.mp3" type="audio/mp3" id="song2"></audio>
             </li>
             
             <hr>
@@ -130,10 +161,8 @@
                     Oh Isha
                     <div class="subtitle">-Major</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song3')"/>
-                </svg>  
-                <audio src="t4.mp3" type="audio/mp3" id="song3"></audio>
+                 
+                <audio controls src="t4.mp3" type="audio/mp3" id="song3"></audio>
             </li>
             
             <hr>
@@ -144,10 +173,8 @@
                     Jana Gana Mana
                     <div class="subtitle">-Major</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song4')"/>
-                </svg>  
-                <audio src="t5.mp3" type="audio/mp3" id="song4"></audio>
+                 
+                <audio controls src="t5.mp3" type="audio/mp3" id="song4"></audio>
             </li>
             
             <hr>
@@ -158,10 +185,8 @@
                     Rooba Rooba
                     <div class="subtitle">-Orange</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song5')"/>
-                </svg>  
-                <audio src="t6.mp3" type="audio/mp3" id="song5"></audio>
+                  
+                <audio controls src="t6.mp3" type="audio/mp3" id="song5"></audio>
             </li>
             
             <hr>
@@ -169,13 +194,11 @@
                 <span>07</span> 
                 <img src="music jpgs/7.jpg">
                 <h4>
-                    Nuvvunte Naa Jathaga
-                    <div class="subtitle">-I</div>                        
+                    Kalavathi
+                    <div class="subtitle">-Sarkar Vaari Paata</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song6')"/>
-                </svg>  
-                <audio src="t7.mp3" type="audio/mp3" id="song6"></audio>
+                 
+                <audio controls src="t7.mp3" type="audio/mp3" id="song6"></audio>
             </li>
             
             <hr>
@@ -183,13 +206,11 @@
                 <span>08</span> 
                 <img src="music jpgs/8.jpg">
                 <h4>
-                    Nee Yadalo Naaku
-                    <div class="subtitle">-Awaara</div>                        
+                    Pataas Pilla
+                    <div class="subtitle">-DJ Tillu</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song7')"/>
-                </svg>  
-                <audio src="t8.mp3" type="audio/mp3" id="song7"></audio>
+                
+                <audio controls src="t8.mp3" type="audio/mp3" id="song7"></audio>
             </li>
             
             <hr>
@@ -197,13 +218,11 @@
                 <span>09</span> 
                 <img src="music jpgs/9.jpg">
                 <h4>
-                    Arerey Manasa
-                    <div class="subtitle">-Falaknuma Das</div>                        
+                    Naatu Naatu
+                    <div class="subtitle">-RRR</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song8')"/>
-                </svg>  
-                <audio src="t9.mp3" type="audio/mp3" id="song8"></audio>
+                 
+                <audio controls src="t9.mp3" type="audio/mp3" id="song8"></audio>
             </li>
             
             <hr>
@@ -211,18 +230,16 @@
                 <span>10</span> 
                 <img src="music jpgs/10.jpg">
                 <h4>
-                    Adiga Adiga
-                    <div class="subtitle">-Ninnu Kori</div>                        
+                    Halamathi habibo
+                    <div class="subtitle">-Beast</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song9')"/>
-                </svg>  
-                <audio src="t10.mp3" type="audio/mp3" id="song9"></audio>
+                  
+                <audio controls src="t10.mp3" type="audio/mp3" id="song9"></audio>
             </li>
             
             <hr>
         </div>
-        <div class="box" style="margin-left: 33%; background: linear-gradient(#2193b0, #6dd5ed);">
+        <div class="box" style="margin-left: 50%; background: linear-gradient(#2193b0, #6dd5ed);">
             <h1>English Songs</h1>
             <hr>
             <li>
@@ -232,10 +249,8 @@
                     Shadow Of mine
                     <div class="subtitle">-Alec Benajmin</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song10')"/>
-                </svg>  
-                <audio src="e1.mp3" type="audio/mp3" id="song10"></audio>
+                  
+                <audio controls src="e1.mp3" type="audio/mp3" id="song10"></audio>
             </li>
             
             <hr>
@@ -246,10 +261,8 @@
                     Let You Down
                     <div class="subtitle">-NF</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song11')"/>
-                </svg>  
-                <audio src="e2.mp3" type="audio/mp3" id="song11"></audio>
+                  
+                <audio controls src="e2.mp3" type="audio/mp3" id="song11"></audio>
             </li>
             
             <hr>
@@ -260,10 +273,8 @@
                     We Don't Talk Anymore
                     <div class="subtitle">-Charlie Puth</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song12')"/>
-                </svg>  
-                <audio src="e3.mp3" type="audio/mp3" id="song12"></audio>
+                 
+                <audio controls src="e3.mp3" type="audio/mp3" id="song12"></audio>
             </li>
             
             <hr>
@@ -274,10 +285,8 @@
                     What Makes You Beautiful
                     <div class="subtitle">-One Direction</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song13')"/>
-                </svg>  
-                <audio src="e4.mp3" type="audio/mp3" id="song13"></audio>
+                  
+                <audio controls src="e4.mp3" type="audio/mp3" id="song13"></audio>
             </li>
             
             <hr>
@@ -288,10 +297,8 @@
                     Change My Clothes
                     <div class="subtitle">-Alec Benjamin</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song14')"/>
-                </svg>  
-                <audio src="e5.mp3" type="audio/mp3" id="song14"></audio>
+                 
+                <audio controls src="e5.mp3" type="audio/mp3" id="song14"></audio>
             </li>
             
             <hr>
@@ -302,10 +309,8 @@
                     If We Have Each Other 
                     <div class="subtitle">-Ale Benjamin</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song15')"/>
-                </svg>  
-                <audio src="e6.mp3" type="audio/mp3" id="song15"></audio>
+                  
+                <audio controls src="e6.mp3" type="audio/mp3" id="song15"></audio>
             </li>
             
             <hr>
@@ -316,10 +321,8 @@
                     Attention
                     <div class="subtitle">-Charlie Puth</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song16')"/>
-                </svg>  
-                <audio src="e7.mp3" type="audio/mp3" id="song16"></audio>
+                  
+                <audio controls src="e7.mp3" type="audio/mp3" id="song16"></audio>
             </li>
             
             <hr>
@@ -330,10 +333,8 @@
                     The Drum
                     <div class="subtitle">-Alan Walker</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song17')"/>
-                </svg>  
-                <audio src="e8.mp3" type="audio/mp3" id="song17"></audio>
+                   
+                <audio controls src="e8.mp3" type="audio/mp3" id="song17"></audio>
             </li>
             
             <hr>
@@ -344,10 +345,8 @@
                     Darkside
                     <div class="subtitle">-Neoni</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song18')"/>
-                </svg>  
-                <audio src="e9.mp3" type="audio/mp3" id="song18"></audio>
+                   
+                <audio controls src="e9.mp3" type="audio/mp3" id="song18"></audio>
             </li>
             
             <hr>
@@ -358,309 +357,17 @@
                     Mask
                     <div class="subtitle">-Dream</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song19')"/>
-                </svg>  
-                <audio src="e10.mp3" type="audio/mp3" id="song19"></audio>
+                  
+                <audio controls src="e10.mp3" type="audio/mp3" id="song19"></audio>
             </li>
             
             <hr>
             
             
         </div>
-        <div class="box" style="margin-left: 66%; background: linear-gradient(#43cea2, #185a9d);">
-            <h1>Tamil Songs</h1>
-            <hr>
-            <li>
-                <span>01</span> 
-                <img src="music jpgs/ta1.jpg">
-                <h4>
-                    Po Urave
-                    <div class="subtitle">-Kaatrin Mozhi</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song20')"/>
-                </svg>  
-                <audio src="ta1.mp3" type="audio/mp3" id="song20"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>02</span> 
-                <img src="music jpgs/ta2.jpg">
-                <h4>
-                    Thangamey
-                    <div class="subtitle">-Naanum Rowdydhaan</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song21')"/>
-                </svg>  
-                <audio src="ta2.mp3" type="audio/mp3" id="song21"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>03</span> 
-                <img src="music jpgs/ta3.jpg">
-                <h4>
-                    Kanave Kanave
-                    <div class="subtitle">-David</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song22')"/>
-                </svg>  
-                <audio src="ta3.mp3" type="audio/mp3" id="song22"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>04</span> 
-                <img src="music jpgs/ta4.jpg">
-                <h4>
-                    High on Love
-                    <div class="subtitle">-Pyaar Prema Kaadhal</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song23')"/>
-                </svg>  
-                <audio src="ta4.mp3" type="audio/mp3" id="song23"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>05</span> 
-                <img src="music jpgs/ta5.jpg">
-                <h4>
-                    Vikram-Title Track
-                    <div class="subtitle">-Vikram</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song24')"/>
-                </svg>  
-                <audio src="ta5.mp3" type="audio/mp3" id="song24"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>06</span> 
-                <img src="music jpgs/ta6.jpg">
-                <h4>
-                    Chellamma
-                    <div class="subtitle">-Doctor</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song25')"/>
-                </svg>  
-                <audio src="ta6mp3.mp3" type="audio/mp3" id="song25"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>07</span> 
-                <img src="music jpgs/ta7.jpg">
-                <h4>
-                    Arabic Kuthu
-                    <div class="subtitle">-Beast</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song26')"/>
-                </svg>  
-                <audio src="ta7.mp3" type="audio/mp3" id="song26"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>08</span> 
-                <img src="music jpgs/ta8.jpg">
-                <h4>
-                    Nenjukkul Peidhidum
-                    <div class="subtitle">-Vaaranam Aayiram</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"  onclick="playt2('song27')"/>
-                </svg>  
-                <audio src="ta8.mp3" type="audio/mp3" id="song27"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>09</span> 
-                <img src="music jpgs/ta9.jpg">
-                <h4>
-                    Oru Maalai
-                    <div class="subtitle">-Ghajini</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song28')"/>
-                </svg>  
-                <audio src="ta9.mp3" type="audio/mp3" id="song28"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>10</span> 
-                <img src="music jpgs/ta10.jpg">
-                <h4>
-                    Vilambara Idaiveli
-
-                    <div class="subtitle">-Imaikkaa Nodigal</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song29')"/>
-                </svg>  
-                <audio src="ta10.mp3" type="audio/mp3" id="song29"></audio>
-            </li>
-            
-            <hr>
-            
-        </div>
-        <div class="box" style="margin-top:350px; background: linear-gradient(#ffd89b, #19547b
-        );">
-            <h1>Malayalam Songs</h1>
-            <hr>
-            <li>
-                <span>01</span> 
-                <img src="music jpgs/m1.jpg">
-                <h4>
-                    Darshana
-                    <div class="subtitle">-Hridayam</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song30')"/>
-                </svg>  
-                <audio src="m1.mp3" type="audio/mp3" id="song30"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>02</span> 
-                <img src="music jpgs/m2.jpg">
-                <h4>
-                    Aaromal
-                    <div class="subtitle">-Sita Ramam</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song31')"/>
-                </svg>  
-                <audio src="m2.mp3" type="audio/mp3" id="song31"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>03</span> 
-                <img src="music jpgs/m3.jpg">
-                <h4>
-                    Journey Song
-                    <div class="subtitle">-777 Charlie</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song32')"/>
-                </svg>  
-                <audio src="m3.mp3" type="audio/mp3" id="song32"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>04</span> 
-                <img src="music jpgs/m4.jpg">
-                <h4>
-                    Neelaakaasakkonil
-                    <div class="subtitle">-Son of Satyamurty</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song33')"/>
-                </svg>  
-                <audio src="m4.mp3" type="audio/mp3" id="song33"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>05</span> 
-                <img src="music jpgs/m5.jpg">
-                <h4>
-                    Fire
-                    <div class="subtitle">-Cold Case</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song34')"/>
-                </svg>  
-                <audio src="m5.mp3" type="audio/mp3" id="song34"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>06</span> 
-                <img src="music jpgs/m6.jpg">
-                <h4>
-                    Ninnaale
-                    <div class="subtitle">-Radhe Shyam</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song35')"/>
-                </svg>  
-                <audio src="m6.mp3" type="audio/mp3" id="song35"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>07</span> 
-                <img src="music jpgs/m7.jpg">
-                <h4>
-                    Parayuvan
-                    <div class="subtitle">-Ishq</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song36')"/>
-                </svg>  
-                <audio src="m7.mp3" type="audio/mp3" id="song36"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>08</span> 
-                <img src="music jpgs/m8.jpg">
-                <h4>
-                    Akale
-                    <div class="subtitle">-Nine</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song37')"/>
-                </svg>  
-                <audio src="m8.mp3" type="audio/mp3" id="song37"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>09</span> 
-                <img src="music jpgs/m9.jpg">
-                <h4>
-                    Manasse Manasse
-                    <div class="subtitle">-Hridayam</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song38')"/>
-                </svg>  
-                <audio src="m9.mp3" type="audio/mp3" id="song38"></audio>
-            </li>
-            
-            <hr>
-            <li>
-                <span>10</span> 
-                <img src="music jpgs/m9.jpg">
-                <h4>
-                    Nagumo
-                    <div class="subtitle">-Hridayam</div>                        
-                </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song39')"/>
-                </svg>  
-                <audio src="m10.mp3" type="audio/mp3" id="song39"></audio>
-            </li>
-            
-            <hr>
-                
-        </div>
-        <div class="box" style="margin-left: 33%; margin-top: 350px; background: linear-gradient(#56ab2f,x #a8e063);">
+        
+        
+        <div class="box" style=" margin-top: 325px; background: linear-gradient(#56ab2f,x #a8e063);">
             <h1>Hindi Songs</h1>
             <hr>
             <li>
@@ -670,10 +377,8 @@
                     Tum Hi Ho
                     <div class="subtitle">-Aashiqui 2</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song40')"/>
-                </svg>  
-                <audio src="h1.mp3" type="audio/mp3" id="song40"></audio>
+                  
+                <audio controls src="h1.mp3" type="audio/mp3" id="song40"></audio>
             </li>
             
             <hr>
@@ -684,10 +389,8 @@
                     Baarish
                     <div class="subtitle">-Half Girlfriend</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song41')"/>
-                </svg>  
-                <audio src="h2.mp3" type="audio/mp3" id="song41"></audio>
+                  
+                <audio controls src="h2.mp3" type="audio/mp3" id="song41"></audio>
             </li>
             
             <hr>
@@ -698,10 +401,8 @@
                     Kaun Tujhe
                     <div class="subtitle">-M.S Dhoni-The Untold Story</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song42')"/>
-                </svg>  
-                <audio src="h3.mp3" type="audio/mp3" id="song42"></audio>
+                 
+                <audio controls src="h3.mp3" type="audio/mp3" id="song42"></audio>
             </li>
             
             <hr>
@@ -712,10 +413,8 @@
                     Lo Safar
                     <div class="subtitle">-Baaghi 2</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song43')"/>
-                </svg>  
-                <audio src="h4.mp3" type="audio/mp3" id="song43"></audio>
+                   
+                <audio controls src="h4.mp3" type="audio/mp3" id="song43"></audio>
             </li>
             
             <hr>
@@ -726,10 +425,8 @@
                     Sunn Raha Hai 
                     <div class="subtitle">-Aashiqui 2</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song44')"/>
-                </svg>  
-                <audio src="h5.mp3" type="audio/mp3" id="song44"></audio>
+                   
+                <audio controls src="h5.mp3" type="audio/mp3" id="song44"></audio>
             </li>
             
             <hr>
@@ -740,10 +437,8 @@
                     Get Ready to fight
                     <div class="subtitle">-Baaghi</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song45')"/>
-                </svg>  
-                <audio src="h6.mp3" type="audio/mp3" id="song45"></audio>
+                  
+                <audio controls src="h6.mp3" type="audio/mp3" id="song45"></audio>
             </li>
             
             <hr>
@@ -754,10 +449,8 @@
                     Jab Tak
                     <div class="subtitle">-M.S Dhoni-The Untold Story</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song46')"/>
-                </svg>  
-                <audio src="h7.mp3" type="audio/mp3" id="song46"></audio>
+                  
+                <audio controls src="h7.mp3" type="audio/mp3" id="song46"></audio>
             </li>
             
             <hr>
@@ -768,10 +461,8 @@
                     Besabriyaan
                     <div class="subtitle">-M.S Dhoni-The Untold Story</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song47')"/>
-                </svg>  
-                <audio src="h8.mp3" type="audio/mp3" id="song47"></audio>
+                  
+                <audio controls src="h8.mp3" type="audio/mp3" id="song47"></audio>
             </li>
             
             <hr>
@@ -782,10 +473,8 @@
                     Bekhayali
                     <div class="subtitle">- Kabir Singh</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song48')"/>
-                </svg>  
-                <audio src="h9.mp3" type="audio/mp3" id="song48"></audio>
+                  
+                <audio controls src="h9.mp3" type="audio/mp3" id="song48"></audio>
             </li>
             
             <hr>
@@ -796,16 +485,14 @@
                     Bulleya
                     <div class="subtitle">-Ae Dil Hai Mushkil/div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song49')"/>
-                </svg>  
-                <audio src="h10.mp3" type="audio/mp3" id="song49"></audio>
+                   
+                <audio controls src="h10.mp3" type="audio/mp3" id="song49"></audio>
             </li>
             
             <hr>
             
         </div>
-        <div class="box" style="margin-left: 66%; margin-top: 350px; background: linear-gradient(#7b4397, #dc2430);">
+        <div class="box" style="margin-left: 50%; margin-top: 325px; background: linear-gradient(#7b4397, #dc2430);">
             <h1>Japanese Songs</h1>
             <hr>
             <li>
@@ -815,10 +502,8 @@
                     Unravel
                     <div class="subtitle">-Tokyo Ghoul</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song50')"/>
-                </svg>  
-                <audio src="j1.mp3" type="audio/mp3" id="song50"></audio>
+                   
+                <audio controls src="j1.mp3" type="audio/mp3" id="song50"></audio>
             </li>
             
             <hr>
@@ -829,10 +514,8 @@
                     Akuma No Ko
                     <div class="subtitle">-Attack on Titan</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song51')"/>
-                </svg>  
-                <audio src="j2.mp3" type="audio/mp3" id="song51"></audio>
+                  
+                <audio controls src="j2.mp3" type="audio/mp3" id="song51"></audio>
             </li>
             
             <hr>
@@ -843,10 +526,8 @@
                     Fukashigi no Carte
                     <div class="subtitle">-</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song52')"/>
-                </svg>  
-                <audio src="j3.mp3" type="audio/mp3" id="song52"></audio>
+                   
+                <audio controls src="j3.mp3" type="audio/mp3" id="song52"></audio>
             </li>
             
             <hr>
@@ -857,10 +538,8 @@
                     Shinzou Wo Sasageyou
                     <div class="subtitle">-Attack on Titan</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song53')"/>
-                </svg>  
-                <audio src="j4.mp3" type="audio/mp3" id="song53"></audio>
+                   
+                <audio controls src="j4.mp3" type="audio/mp3" id="song53"></audio>
             </li>
             
             <hr>
@@ -871,10 +550,8 @@
                     One Last Kiss
                     <div class="subtitle">-Evangelion</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song54')"/>
-                </svg>  
-                <audio src="j5.mp3" type="audio/mp3" id="song54"></audio>
+                   
+                <audio controls src="j5.mp3" type="audio/mp3" id="song54"></audio>
             </li>
             
             <hr>
@@ -885,10 +562,8 @@
                     Guren no Yumiya
                     <div class="subtitle">-Attack on Titan</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song55')"/>
-                </svg>  
-                <audio src="j6.mp3" type="audio/mp3" id="song55"></audio>
+                   
+                <audio controls src="j6.mp3" type="audio/mp3" id="song55"></audio>
             </li>
             <hr>
             <li>
@@ -898,10 +573,8 @@
                     Cry Baby
                     <div class="subtitle">-Tokyo Revengers</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song56')"/>
-                </svg>  
-                <audio src="j7.mp3" type="audio/mp3" id="song56"></audio>
+                
+                <audio controls src="j7.mp3" type="audio/mp3" id="song56"></audio>
             </li>
             
             <hr>
@@ -912,10 +585,8 @@
                     Gurenge
                     <div class="subtitle">-Demon Slayer</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song57')"/>
-                </svg>  
-                <audio src="j8.mp3" type="audio/mp3" id="song57"></audio>
+                   
+                <audio controls src="j8.mp3" type="audio/mp3" id="song57"></audio>
             </li>
             
             <hr>
@@ -926,10 +597,8 @@
                     The World
                     <div class="subtitle">-Death Note</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song58')"/>
-                </svg>  
-                <audio src="j9.mp3" type="audio/mp3" id="song58"></audio>
+                  
+                <audio controls src="j9.mp3" type="audio/mp3" id="song58"></audio>
             </li>
             
             <hr>
@@ -940,14 +609,21 @@
                     Kaikai Kitan
                     <div class="subtitle">-Jujutsu Kaisen</div>                        
                 </h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" onclick="playt2('song59')"/>
-                </svg>  
-                <audio src="j10.mp3" type="audio/mp3" id="song59"></audio>
+                   
+                <audio controls src="j10.mp3" type="audio/mp3" id="song59"></audio>
             </li>
             
             <hr>
             
+        </div>
+        <div class="Footer">
+            <footer class="Copyright">
+                <div>
+                    Decibel-Music Player  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16" style="margin-bottom: -2px">
+                    <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                    </svg>  2022 - Copyright. All rights Reserved.
+                </div>
+            </footer>
         </div>
     </body>
 </html>
